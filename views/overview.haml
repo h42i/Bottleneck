@@ -1,0 +1,28 @@
+%h1 Products
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Count
+      %th Sum
+  %tbody
+    - for product in @overview
+      %tr
+        %td= product['name'] || product['ean']
+        %td= product['count']
+        %td= (product['count'] * product['price'])
+
+%h1 Order history
+
+%table
+  %thead
+    %tr
+      %th Date
+      %th Name
+  %tbody
+    - for order in @orders
+      %tr
+        %td= Time.at(order['time'] / 1000)
+        %td= order['name'] || order['ean']
+

@@ -1,0 +1,41 @@
+@import 'flat.sass'
+
+*, *:before, *:after
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  color: #333
+  font-family: sans-serif
+  margin: 0
+  padding: 0
+
+nav
+  background: $nephritis
+  padding: 8px
+  a
+    display: inline-block
+    text-decoration: none
+    color: white
+    &:hover
+      color: $sun-flower
+main
+  width: 100%
+  max-width: 60em
+  margin: auto
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+  text-align: left
+  width: 100%
+  thead
+    border-bottom: 2px solid #333
+  tr
+    line-height: 1.4
+    td, th
+      padding: 8px
+  tr:nth-child(2n)
+    td
+      background: #ddd
