@@ -12,7 +12,13 @@
         %td= product['name'] || product['ean']
         %td= product['count']
         %td= (product['count'] * product['price'])
-
+    %tr
+      %td
+        %strong Total
+      %td
+        %strong= (@overview.inject(0) { |sum, e| sum + e['count'] })
+      %td
+        %strong= (@overview.inject(0) { |sum, e| sum + (e['count'] * e['price']) })
 %h1 Order history
 
 %table
