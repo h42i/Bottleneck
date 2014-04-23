@@ -4,13 +4,14 @@
     %meta{:charset => 'utf-8'}
     %meta{:name => 'viewport', :content => 'width=device-width, user-scalable=no'}
     %title Bottleneck
-    %link{:rel => "stylesheet", :href => "/css/main.css"}
+    %link{:rel => 'stylesheet', :href => '/css/main.css'}
   %body
     %header
       %nav
         %a{:href => '/'} All
-        %a{:href => "/?from=#{todayMidnight}&to#{tomorrowMidnight}"} Today
-        %a{:href => '/test'} Test
+        %a{:href => "/?from=#{date[:today]}&to=#{date[:tomorrow]}"} Today
+        -#%a{:href => '/test'} Test
         %a{:href => '/export'} Export
+        %a{:href => '/chart.html'} Chart
     %main
       = yield

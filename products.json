@@ -1,50 +1,62 @@
 {
     "1094922076211": {
         "name": "Hermann Brause Zitrone 0,3l",
-        "price": 1.5
+        "price": 1.13
     },
     "1094922076228": {
         "name": "Hermann Brause Orange 0,3l",
-        "price": 1.5
+        "price": 1.13
     },
     "1094922076235": {
         "name": "Hermann Brause Melone Limette 0,3l",
-        "price": 1.5
+        "price": 1.07
+    },
+    "1094922076303": {
+        "name": "Hausmarke Lakritz Cola 0,3l",
+        "price": 1.09
     },
     "2342133700005": {
         "name": "Frohlunder 0,3l",
-        "price": 1.5
+        "price": 1.42
+    },
+    "1337": {
+        "name": "Fuck, die Flasche hat ja garkeine EAN!",
+        "price": 1
     },
     "2342133700012": {
         "name": "Premium Cola 0,5l",
-        "price": 1.5
+        "price": 1.09
     },
     "4029764001807": {
         "name": "Club-Mate 0,5l",
-        "price": 1.5
+        "price": 1.10
+    },
+    "4029764001821": {
+        "name": "Club-Mate 0,3l",
+        "price": 1.02
     },
     "4029764001814": {
         "name": "ICE-Tea KRAFTSTOFF 0,5l",
-        "price": 1.5
+        "price": 1.16
     },
     "4029764001869": {
         "name": "Club-Mate Winter Edition 0,5l",
-        "price": 1.5
+        "price": 1.10
     },
     "4029764001883": {
         "name": "Cola Club-Mate 0,3l",
-        "price": 1.5
+        "price": 1.02
     },
     "4260031874056": {
         "name": "Flora Mate 0,5l",
-        "price": 1.5
+        "price": 1.32
     },
     "4260187540010": {
         "name": "Gruen 0,3l",
-        "price": 1.5
+        "price": 1.24
     },
     "42602903": {
         "name": "Pimpinella Anis Limiette 0,3l",
-        "price": 1.5
+        "price": 0.91
     }
 }

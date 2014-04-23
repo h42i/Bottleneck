@@ -1,17 +1,15 @@
-require 'json'
-
 module Bottleneck
   class Order
-    def self.all
-      self.in_range(0, -1)
-    end
-
-    def self.in_range(from, to)
-      $REDIS.zrangebyscore('orders', from, to).map { |e| JSON.parse(e) }
+    def self.range(from, to)
+      orders = $REDIS.zrangebyscore('orders', from, to)
+      orders.map do |e|
+        p = e.split(':')
+        {'time' => p[0].to_i, 'ean' => p[1]}
+      end
     end
 
     def self.create(time, ean)
-      $REDIS.zadd('orders', time, {:time => time, :ean => ean}.to_json)
+      $REDIS.zadd('orders', time, "#{time}:#{ean}")
     end
   end
 end

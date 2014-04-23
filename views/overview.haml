@@ -1,5 +1,12 @@
 %h1 Products
 
+%form{:action => '/date', :method => 'POST'}
+  From:
+  %input{:type => 'date', :name => 'range[from]', :value => @range[:from]}
+  To:
+  %input{:type => 'date', :name => 'range[to]', :value => @range[:to]}
+  %input{:type => 'submit'}
+
 %table
   %thead
     %tr
@@ -11,14 +18,14 @@
       %tr
         %td= product['name'] || product['ean']
         %td= product['count']
-        %td= (product['count'] * product['price'])
+        %td= (product['count'] * product['price']).round(3)
     %tr
       %td
         %strong Total
       %td
         %strong= (@overview.inject(0) { |sum, e| sum + e['count'] })
       %td
-        %strong= (@overview.inject(0) { |sum, e| sum + (e['count'] * e['price']) })
+        %strong= (@overview.inject(0) { |sum, e| sum + (e['count'] * e['price']) }).round(3)
 %h1 Order history
 
 %table
